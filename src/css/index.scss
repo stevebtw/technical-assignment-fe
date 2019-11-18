@@ -1,9 +1,134 @@
-@import './style.css';
+@import "globals";
 
-body {
-	background-color: green;
+html,
+body{
+    height:100%;
+    text-align:center;
+    font-family: Arial, sans-serif;
+    padding:0;
+    margin:0;
+}
 
-	h1 {
-		color: white;
-	}
+#game{
+    display:flex;
+    justify-content: space-between;
+    align-content: space-between;
+    box-sizing: border-box;
+    height:100%;
+
+    @media only screen and (max-width: $breakpoint) {
+       flex-direction:column;
+    }
+}
+
+
+#player1{
+    background-color:#3EBBB7;
+}
+#player2{
+    background-color:#7ED279;
+}
+.player{
+    flex:1;
+    align-items: start;
+    box-sizing: border-box;
+    text-align: center;
+    background:#fff;
+    height:100%;
+    padding:24px;
+
+    @media only screen and (max-width: $breakpoint){
+        padding:12px;
+    }
+
+    h2{
+        opacity: .6;
+        font-size:600%;
+        font-size:8vw;
+    }
+
+    p{
+        font-size:85%;
+        text-transform:uppercase;
+        opacity:.5;
+        margin-bottom:24px;
+    }
+
+    data{
+        margin:24px 0;
+        padding:8px 12px;
+        background:#fff;
+        opacity:.67;
+        border-radius: 5px;
+        font-weight:bold;
+        font-size:120%;
+        text-transform: uppercase;
+
+        &:before{
+            content : "Score: "
+        }
+    }
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding:12px 0;
+    max-width:500px;
+    margin:0 auto;
+}
+
+button{
+    flex: 1;
+    appearance: none;
+    outline:none;
+    cursor:pointer;
+    background:#000;
+    color:#fff;
+    border:none;
+    padding:12px;
+    margin:6px;
+    border-radius:6px;
+    opacity: .5;
+    transition:.3s ease;
+
+    @media only screen and (max-width: $breakpoint){
+        padding:12px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus{
+        opacity:1;
+    }
+}
+#play_button{
+    margin:auto;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding:12px;
+    background:#2a2a2a;
+    color:$header_font_color;
+
+    a{
+        color:$header_font_color;
+        text-decoration:none;
+        transition:.3s ease;
+
+        &.selected{
+            font-weight:bold;
+        }
+
+        &:hover{
+           text-decoration: underline;
+        }
+
+    }
+
+   
+    #settings_reset{
+        text-align:right;      
+    }
 }

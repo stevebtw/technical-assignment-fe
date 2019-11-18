@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Rock - Paper - Scissors</title>
-		<meta charset="UTF-8" />
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
-	<body>
-		<h1>You are ready to go! :)</h1>
-		<h2>Good luck!</h2>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <header>
+        <span>
+            Mode:
+            <a href="#" class="settings_mode" title="Change game play to manual mode">Manual</a>
+            <a href="#" class="settings_mode" title="Change game play to automatic mode">Auto</a>
+        </span>
+
+        <span>
+            Rules:
+            <a href="#" class="settings_rules" title="Change game rules to Classic: Rock, Paper, Scissors">Classic</a>
+            <a href="#" class="settings_rules"
+                title="Change game rules to button_advanced: Rock, Paper, Scissors, Lizard, Spock">Advanced</a>
+        </span>
+        <a href="#" id="settings_reset" title="Start a new Game and clear scores">New Game</a>
+    </header>
+
+    <div id="game">
+        <section id="player1" class="player">
+            <p>Player 1</p>
+            <data id="score1" title="Score">0</data>
+            <h2 id="choice1" title="Choice"></h2>
+
+            <nav id="play_buttons">
+                <button role="button">ROCK</button>
+                <button role="button">PAPER</button>
+                <button role="button">SCISSORS</button>
+                <button role="button" class="button_advanced">LIZARD</button>
+                <button role="button" class="button_advanced">SPOCK</button>
+            </nav>
+
+            <button id="play_button" role="button">Play</button>
+
+        </section>
+
+        <section id="player2" class="player">
+            <p>Player 2</p>
+            <data id="score2" title="Score">0</data>
+            <h2 id="choice2" title="Choice"></h2>
+        </section>
+    </div>
+
+</body>
+
 </html>
